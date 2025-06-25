@@ -34,6 +34,8 @@ function zellij_session_manager
     set -l all_session_lines (zellij list-sessions --no-formatting 2>/dev/null)
 
     set -l menu_options
+    set -a menu_options new_fish "Start Shell: fish"
+    set -a menu_options new_bash "Start Shell: bash"
 
     if test (count $all_session_lines) -gt 0
         for line in $all_session_lines
@@ -75,6 +77,10 @@ end
 
 set -l chosen_option (zellij_session_manager)
 switch $chosen_option
+    case new_fish
+        fish
+    case new_bash
+        bash
     case new_session
         set name (random-slug)
         set session_name (whiptail --inputbox "Session name" 8 39 "$name" --title "Create new session" 3>&1 1>&2 2>&3)
