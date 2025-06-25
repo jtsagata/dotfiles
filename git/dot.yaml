@@ -1,4 +1,5 @@
 global:
   links:
     gitignore: ~/.gitignore
-  installs: false
+    gitconfig: ~/.gitconfig
+

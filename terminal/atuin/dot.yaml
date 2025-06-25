@@ -2,5 +2,3 @@ linux:
   links:
     config.toml: ~/.config/atuin/config.toml
     themes: ~/.config/atuin/themes
-
-  installs: false
