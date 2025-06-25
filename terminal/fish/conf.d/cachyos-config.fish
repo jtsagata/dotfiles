@@ -72,14 +72,6 @@ function copy
 end
 
 ## Useful aliases
-# Replace ls with eza
-set -gx LS_COLORS "$(vivid generate nord)"
-alias ls='eza  --color=always --group-directories-first --icons --color-scale --hyperlink'
-alias la='eza -a --color=always --group-directories-first --icons --color-scale --hyperlink' 
-alias ll='eza -l --color=always --group-directories-first --icons --color-scale --hyperlink' 
-alias lt='eza -aT --color=always --group-directories-first --icons --color-scale --hyperlink'
-alias tree='eza --tree --level=2 --long --icons --git --hyperlink' 
-alias l.="eza -a --icons  | grep -e '^\.'" # show only dotfiles
 
 alias rm='trash'
 
@@ -105,6 +97,8 @@ alias hw='hwinfo --short' # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl" # Sort installed packages according to size in MB
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 alias update='sudo pacman -Syu'
+
+alias cat='bat'
 
 # Get fastest mirrors
 alias mirror="sudo cachyos-rate-mirrors"
