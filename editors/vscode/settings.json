@@ -1,12 +1,16 @@
 {
-    "telemetry.telemetryLevel": "off",
-    "diffEditor.codeLens": true,
-    "telemetry.feedback.enabled": false,
     "code-runner.enableAppInsights": false,
-    "geminicodeassist.enableTelemetry": false,
-    "git.confirmSync": false,
+    "diffEditor.codeLens": true,
     "editor.fontFamily": "'MesloLGMDZ Nerd Font Mono','Droid Sans Mono', 'monospace', monospace",
     "editor.formatOnSave": true,
+    "geminicodeassist.enableTelemetry": false,
+    "git.confirmSync": false,
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "workbench.colorTheme": "Nord",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "material-product-icons",
     "workbench.tree.indent": 12,
     "workbench.tree.renderIndentGuides": "always"
 }
