@@ -12,7 +12,7 @@ if not set -q TERM_PROGRAM
     if test "$TERMINAL_EMULATOR" = JetBrains-JediTerm
         set -gx TERM_PROGRAM JetBrains
     else if set -q ALACRITTY_WINDOW_ID
-        # Also cosmic terminal
+        # Also cosmic terminal and wezterm
         set -gx TERM_PROGRAM alacritty
     else if set -q INSIDE_NAUTILUS_PYTHON
         set -gx TERM_PROGRAM nautilus
@@ -24,7 +24,7 @@ end
 # Check for unsupported terminal environments before proceeding
 if test "$TERM_PROGRAM" = vscode -o "$TERM_PROGRAM" = JetBrains
     ctrem "[green]Zellij[/] is not supported in [green]VSCode[/] or [green]JetBrains IDEs[/]."
-    return # Exit the function if not supported
+    return
 end
 
 # 
@@ -100,8 +100,23 @@ end
 #  random name generator
 # 
 function random-slug --description "Generate a random two-word slug"
-    set words1 adjective agile brave calm clever crazy eager fancy gentle happy cozzy
-    set words2 noun bear cat dog fox goat lion panda tiger whale fennec coder tester lama
+    set -l words1 \
+        agile brave calm clever crazy eager fancy gentle happy cozy quick sly swift tall short wide narrow deep shallow bright dark shiny dull \
+        ancient bizarre cosmic curious dynamic eerie elusive fiery fluent fuzzy glitchy golden grand hazy humble hungry icy infinite jazzy jovial keen lucid luminous \
+        magnetic merry misty nimble noble obscure odd open ornate peaceful phantom playful plucky prime pure quaint quiet radiant rapid raw regal restless \
+        robust rustic serene sharp silent silver sleek smooth solid spooky stellar stoic strong subtle superb supreme tender tranquil transparent tricky twilight ultimate uncharted \
+        vibrant vivid void whispering wild witty wondrous zealous zen electric vibrant digital virtual quantum cyber nexus aurora comet nebula pulsar nova \
+        alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu nu xi omicron pi rho sigma tau upsilon phi chi psi omega
+
+    set -l words2 \
+        bear cat dog fox goat lion panda tiger whale fennec coder tester lama \
+        bird fish snake frog bug ant bee crow owl bat wolf deer horse cow pig duck goose mouse elephant giraffe zebra monkey shark dolphin octopus crab lobster \
+        eagle hawk falcon raven sparrow robin hummingbird chameleon squirrel badger beaver otter weasel stoat ferret chipmunk raccoon opossum armadillo porcupine hedgehog koala platypus \
+        data tech code script byte pixel query server network cloud system program app database container cluster pipeline stream sensor engine model agent bot \
+        beacon portal gateway spire temple tower fortress bridge path road trail forest mountain river ocean lake island valley desert tundra swamp jungle city town village \
+        star moon sun earth mars jupiter saturn uranus neptune pluto galaxy cosmos universe void abyss sphere orbit comet asteroid meteor satellite drone robot cyborg \
+        echo fable glyph halo ignite journey karma lunar mystic oasis prism quest ripple shadow tide urban vapor wander yearn zest \
+        core apex summit pinnacle zenith vortex catalyst spark surge shift forge shield guardian phantom spirit ghost wraith titan behemoth juggernaut sentinel vanguard
 
     set word1 (random choice $words1)
     set word2 (random choice $words2)
