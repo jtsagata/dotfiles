@@ -1,0 +1,4 @@
+darwin|linux:
+  links:
+    ini: ~/.config/mc/ini
+    panels.ini: ~/.config/mc/panles.ini

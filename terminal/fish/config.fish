@@ -14,5 +14,5 @@ starship init fish | source
 export NAVI_FZF_OVERRIDES='--height 15'
 export NAVI_FZF_OVERRIDES_VAR='--height 15'
 
-# Use Alt-S for <TAB> search, conflict solve for zellyj
-bind --preset alt-s pager-toggle-search
+# Use Ctrl-y for <TAB> search, conflict solve for zellyj
+bind ctrl-y pager-toggle-search
