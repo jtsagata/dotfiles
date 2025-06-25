@@ -1,0 +1,17 @@
+#  ~/.config/systemd/user/cosmic-conky.service
+
+[Unit]
+Type=simple
+Description=Conky Service
+Wants=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStartPre=sleep 10
+ExecStart=conky --config="%h/.config/conky.conf" --pause=5
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,41 @@
+;; This is a kanata keyboard
+
+(defcfg
+  linux-dev /dev/input/by-id/usb-wch.cn_CH57x-event-kbd
+  log-layer-changes no
+  allow-hardware-repeat false
+)
+
+
+(defsrc
+    1 2 3    a b c   j k l
+    4 5 6    d e f   m n o
+    7 8 9    g h i   p q r
+)
+
+
+(deflayermap (base)
+    1 ∅
+    2 M-up   ;; switch window focus
+    3 ∅
+    4 M-left  ;; switch window focus
+    ;; When press "5" enter launcher mode
+    5 (multi (layer-switch arrows) M-/ )
+    6 M-right ;; switch window focus
+    7 ∅
+    8 M-down  ;; switch window focus
+    9 ∅
+)
+
+;; Used when on launcher mode
+(deflayermap (arrows)
+    1 (multi (layer-switch base) esc)
+    2 up
+    3 (macro S-` / )
+    4 (macro d d g ␣ )
+    5 (multi (layer-switch base) ret)
+    6 (macro g o o g l e ␣ )
+    7 (macro f i n d ␣ )
+    8 down 
+    9 (macro r e c e n t ␣ )
+)

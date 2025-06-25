@@ -1,0 +1,11 @@
+[Unit]
+Description=Razer Black Window Elite
+PartOf=macro-keyboards.target
+
+[Service]
+StandardInput=null
+ExecStart=kanata  --cfg %h/.config/keyboards/black-window.kbd                     
+
+
+[Install]
+WantedBy=macro-keyboards.target

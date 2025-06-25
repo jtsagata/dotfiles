@@ -1,0 +1,3 @@
+linux:
+  links:
+    settings.json: ~/.config/Code/User/settings.json

@@ -1,0 +1,6 @@
+links:
+  cosmic-conky.service: ~/.config/systemd/user/cosmic-conky.service
+  kanata-black-window.service: ~/.config/systemd/user/kanata-black-window.service
+  kanata-ch57.service: ~/.config/systemd/user/kanata-ch57.service
+  macro-keyboards.target: ~/.config/systemd/user/macro-keyboards.target
+  timewall.service: ~/.config/systemd/user/timewall.service

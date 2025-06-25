@@ -1,0 +1,10 @@
+[Unit]
+Description=CH57 Macro keyboard [/dev/input/ch7_kbd]
+PartOf=macro-keyboards.target
+
+[Service]
+ExecStart=kanata  --cfg %h/.config/keyboards/ch57.kbd                     
+StandardInput=null
+
+[Install]
+WantedBy=macro-keyboards.target

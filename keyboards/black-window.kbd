@@ -1,0 +1,41 @@
+;; This is a kanata keyboard
+;; Note that the Volume-Up/VolumeDown is mapped on the mouse
+
+(defcfg
+  linux-dev (
+    /dev/input/by-id/usb-Razer_Razer_BlackWidow_Elite-event-kbd
+    /dev/input/by-id/usb-Razer_Razer_BlackWidow_Elite-if01-event-kbd
+    /dev/input/by-id/usb-Razer_Razer_BlackWidow_Elite-if02-event-mouse
+  )
+  log-layer-changes no
+  allow-hardware-repeat true
+  process-unmapped-keys yes
+)
+
+;; https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
+;; (defsrc
+;;   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause prev prev pp         volu
+;;   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-   mute
+;;   tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret   del  end  pgdn  kp7  kp8  kp9  kp+   vold
+;;   caps a    s    d    f    g    h    j    k    l    ;    '    \                          kp4  kp5  kp6
+;;   lsft z    x    c    v    b    n    m    ,    .    /    rsft            up              kp1  kp2  kp3  kprt
+;;   lctl lmet lalt           spc                 ralt rmet cmp  rctl       left down rght  kp0  kp.
+;; )
+
+(defsrc        
+  nlck kp/  kp*
+  kp7  kp8  kp9
+  kp4  kp5  kp6
+  kp1  kp2  kp3
+  kp0  kp.
+  kp+  kp-  kprt
+)
+
+(deflayer base
+  7    8    9
+  4    5    6
+  1    2    3
+  XX   XX   0
+  XX   XX
+  kp+  kp-  kprt
+)

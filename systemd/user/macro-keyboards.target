@@ -1,0 +1,6 @@
+[Unit]
+Description=All Macro Keyboards
+Documentation=http://berry.local/code/crusty-desktop/crusty-keyboard
+
+[Install]
+WantedBy=default.target
