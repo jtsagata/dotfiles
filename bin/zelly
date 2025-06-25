@@ -1,0 +1,112 @@
+#!/usr/bin/env fish
+# This script uses whiptail to create an interactive menu for managing Zellyj sessions.
+set -l script_path (status --current-filename)
+
+if set -q ZELLIJ_SESSION_NAME
+    ctrem "[red]Error:[/] Allready inside session [green]$ZELLIJ_SESSION_NAME [/]"
+    exit 1
+end
+
+# Get the terminal
+if not set -q TERM_PROGRAM
+    if test "$TERMINAL_EMULATOR" = JetBrains-JediTerm
+        set -gx TERM_PROGRAM JetBrains
+    else if set -q ALACRITTY_WINDOW_ID
+        # Also cosmic terminal
+        set -gx TERM_PROGRAM alacritty
+    else if set -q INSIDE_NAUTILUS_PYTHON
+        set -gx TERM_PROGRAM nautilus
+    else
+        set -gx TERM_PROGRAM xterm
+    end
+end
+
+# Check for unsupported terminal environments before proceeding
+if test "$TERM_PROGRAM" = vscode -o "$TERM_PROGRAM" = JetBrains
+    ctrem "[green]Zellij[/] is not supported in [green]VSCode[/] or [green]JetBrains IDEs[/]."
+    return # Exit the function if not supported
+end
+
+# 
+#  zellij_session_manager
+# 
+function zellij_session_manager
+    set -l all_session_lines (zellij list-sessions --no-formatting 2>/dev/null)
+
+    set -l menu_options
+
+    if test (count $all_session_lines) -gt 0
+        for line in $all_session_lines
+            set line (string trim -- "$line")
+            set -l match (string match --regex '^([^\[]+)\s+(\[.*?\])\s*(\(.*\))?$' "$line")
+
+            if test (count $match) -ge 3
+                set -l session_name (string trim -- "$match[2]")
+                set -l created_info (string trim -- "$match[3]")
+                set -l status_info ""
+
+                if test (count $match) -ge 4
+                    set status_info (string trim -- "$match[4]")
+                end
+
+                set -l description "Join: $session_name $created_info"
+                if test -n "$status_info"
+                    set description "$description EXITED"
+                end
+
+                set -a menu_options "$session_name" "$description"
+            end
+        end
+    end
+
+    set -a menu_options new_session "Create a new Zellij session"
+    set -a menu_options kill_sessions "Terminate all other Zellij sessions"
+
+    set -l list_height (math (count $all_session_lines) + 4)
+
+    set -l chosen_option (whiptail --title "Create or join a Zellij session" \
+        --menu "Choose something:" \
+        20 100 $list_height \
+        $menu_options 3>&1 1>&2 2>&3)
+
+    # Return the chosen option
+    echo "$chosen_option"
+end
+
+set -l chosen_option (zellij_session_manager)
+switch $chosen_option
+    case new_session
+        set name (random-slug)
+        set session_name (whiptail --inputbox "Session name" 8 39 "$name" --title "Create new session" 3>&1 1>&2 2>&3)
+        zellij --session $session_name
+    case kill_sessions
+        if whiptail --title "Killing sessions" --yesno "Killing all sessions?" 8 78
+            zellij kill-all-sessions --yes
+            zellij delete-all-sessions --force --yes
+            exec fish -c "source \"$script_path\" $argv"
+        else
+            echo Canceled
+        end
+    case '*'
+        if not set -q chosen_option[1]
+            echo "No valid option selected or action cancelled."
+            exit 1
+        else
+            zellij attach $chosen_option
+        end
+end
+
+# 
+#  random name generator
+# 
+function random-slug --description "Generate a random two-word slug"
+    set words1 adjective agile brave calm clever crazy eager fancy gentle happy cozzy
+    set words2 noun bear cat dog fox goat lion panda tiger whale fennec coder tester lama
+
+    set word1 (random choice $words1)
+    set word2 (random choice $words2)
+
+    echo "$word1-$word2"
+end
+
+exit
