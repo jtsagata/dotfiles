@@ -1,0 +1,3 @@
+linux:
+  links:
+    timewall.toml: ~/.config/timewall/config.toml
