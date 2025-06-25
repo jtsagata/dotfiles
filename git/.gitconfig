@@ -1,0 +1,16 @@
+[user]
+name = Ioannis Tsagkatakis
+email = tsagatakis@protonmail.com
+
+[core]
+autocrlf = input
+excludefile = ~/.gitignore
+
+[init]
+defaultBranch = main
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
