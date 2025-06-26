@@ -1,0 +1,3 @@
+links:
+  ssh_auth_socket.conf: ~/.config/environment.d/ssh_auth_socket.conf
+  config: ~/.ssh/config

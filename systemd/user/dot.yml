@@ -4,4 +4,3 @@ links:
   kanata-ch57.service: ~/.config/systemd/user/kanata-ch57.service
   macro-keyboards.target: ~/.config/systemd/user/macro-keyboards.target
   timewall.service: ~/.config/systemd/user/timewall.service
-  ssh_auth_socket.conf: ~/.config/environment.d/ssh_auth_socket.conf

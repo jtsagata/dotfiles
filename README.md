@@ -29,23 +29,10 @@ yay -Rns package_name     # Remove with dependencies and config
 - **eza** A better ls
 - **vivid** Vivid ls colors
 
-## Terminals
-
-| Feature | Cosmic | Gnome | WezTerm | Alacritty |
-|---------|--------|-------|---------|-----------|
-| links   |       |      |        |  |
-| copy/paste|     |      |        |  |
-| to_code |       |      |        |  |
-| bar     |       |      |        |  |
-
-
 
 ## Issues
 - Links on cosmic-terminal
-- Up fires atuin
 
 ## TODO
 - new-script
-- show network by program
-- Wwrite about ssh-agent
 
