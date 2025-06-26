@@ -46,4 +46,5 @@ yay -Rns package_name     # Remove with dependencies and config
 ## TODO
 - new-script
 - show network by program
+- Wwrite about ssh-agent
 

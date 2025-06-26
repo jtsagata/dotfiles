@@ -1,0 +1,8 @@
+darwin|linux:
+  links:
+    org.wezfurlong.wezterm.desktop: ~/.local/share/applications/org.wezfurlong.wezterm.desktop
+    org.wezfurlong.wezterm2.png: ~/.local/share/icons/hicolor/128x128/apps/org.wezfurlong.wezterm2.png
+    wezterm.lua: ~/.config/wezterm/wezterm.lua
+    tabline.lua: ~/.config/wezterm/tabline.lua
+    utils.lua: ~/.config/wezterm/utils.lua
+    constants.lua: ~/.config/wezterm/constants.lua
