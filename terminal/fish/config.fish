@@ -17,6 +17,9 @@ export SYSTEMD_PAGER="bat"
 
 # Use Ctrl-y for <TAB> search, conflict solve for zellyj
 bind ctrl-y pager-toggle-search
+bind up _atuin_bind_up
+
+alias topnet="nethogs -b"
 
 set -gx TERMINAL_PROG (terminal-type)
 # ctrem "On terminal [green]'$TERMINAL_PROG'[/] agent [green]'$SSH_AGENT_PID'[/] "$SSH_AUTH_SOCK""

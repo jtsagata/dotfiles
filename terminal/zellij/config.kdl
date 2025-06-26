@@ -260,7 +260,7 @@ load_plugins {
 //   - true
 //   - false (Default)
 // 
-// simplified_ui true
+simplified_ui true
  
 // Choose the theme that is specified in the themes section.
 // Default: default
@@ -303,14 +303,14 @@ default_shell "fish"
 //   - true (default)
 //   - false
 // 
-mouse_mode false
+mouse_mode true
  
 // Toggle having pane frames around the panes
 // Options:
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -345,7 +345,7 @@ mouse_mode false
 // Examples:
 //
 // copy_command "xclip -selection clipboard" // x11
-copy_command "wl-copy" 
+// copy_command "wl-copy" 
 // copy_command "pbcopy"                     // osx
 // 
 // copy_command "pbcopy"
@@ -357,7 +357,7 @@ copy_command "wl-copy"
 //   - system (default)
 //   - primary
 // 
-// copy_clipboard "primary"
+copy_clipboard "system"  
  
 // Enable automatic copying (and clearing) of selection when releasing mouse
 // Default: true
@@ -413,7 +413,7 @@ copy_command "wl-copy"
 // (Requires restart)
 // Default: true
 // 
-// styled_underlines false
+styled_underlines true
  
 // How often in seconds sessions are serialized
 // 
@@ -430,7 +430,7 @@ copy_command "wl-copy"
 // (Requires restart)
 // Default: true (if the host terminal supports it)
 // 
-// support_kitty_keyboard_protocol false
+support_kitty_keyboard_protocol true
  
 // Whether to stack panes when resizing beyond a certain size
 // Default: true

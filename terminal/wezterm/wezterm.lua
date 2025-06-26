@@ -9,6 +9,8 @@ local tabline = require('tabline')
 local utils = require('utils')
 
 
+config.enable_kitty_keyboard = true
+
 config.default_prog = constants.prog
 -- config.initial_cols = constants.width
 -- config.initial_rows = constants.height
