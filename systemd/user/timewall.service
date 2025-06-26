@@ -5,8 +5,8 @@ After=graphical-session.target
 
 [Service]
 Type=simple
-ExecStartPre=sleep 5
-ExecStart=%h/.cargo/bin/timewall set --daemon
+ExecStartPre=sleep 10
+ExecStart=%h/.cargo/bin/timewall set  --daemon
 
 [Install]
 WantedBy=default.target

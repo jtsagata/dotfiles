@@ -16,14 +16,3 @@ export NAVI_FZF_OVERRIDES_VAR='--height 15'
 
 # Use Ctrl-y for <TAB> search, conflict solve for zellyj
 bind ctrl-y pager-toggle-search
-
-if status --is-interactive
-    keychain --quiet id_ed25519
-end
-
-begin
-    set -l HOSTNAME (hostname)
-    if test -f ~/.keychain/$HOSTNAME-fish
-        source ~/.keychain/$HOSTNAME-fish
-    end
-end
