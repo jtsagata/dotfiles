@@ -8,7 +8,6 @@ function reload --description 'Reload Fish'
     source ~/.config/fish/config.fish
 end
 
-bass source /etc/profile
 starship init fish | source
 
 export NAVI_FZF_OVERRIDES='--height 15'
@@ -16,3 +15,6 @@ export NAVI_FZF_OVERRIDES_VAR='--height 15'
 
 # Use Ctrl-y for <TAB> search, conflict solve for zellyj
 bind ctrl-y pager-toggle-search
+
+set -gx TERMINAL_PROG (terminal-type)
+ctrem "On terminal [green]'$TERMINAL_PROG'[/] agent [green]'$SSH_AGENT_PID'[/] "$SSH_AUTH_SOCK""

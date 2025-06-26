@@ -20,7 +20,7 @@ yay -S google-chrome      # Install from AUR
 yay -Rns package_name     # Remove with dependencies and config
 ```
 
-## What i use
+## What I use
 
 - **atuin** Magic shell history
 - **zoxide** Smart cd
@@ -28,3 +28,22 @@ yay -Rns package_name     # Remove with dependencies and config
 - **magic-enter** Magic enter key
 - **eza** A better ls
 - **vivid** Vivid ls colors
+
+## Terminals
+
+| Feature | Cosmic | Gnome | WezTerm | Alacritty |
+|---------|--------|-------|---------|-----------|
+| links   |       |      |        |  |
+| copy/paste|     |      |        |  |
+| to_code |       |      |        |  |
+| bar     |       |      |        |  |
+
+
+
+## Issues
+- Links on cosmic-terminal
+
+## TODO
+- new-script
+- show network by program
+
