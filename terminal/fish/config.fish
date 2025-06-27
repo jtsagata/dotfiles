@@ -24,6 +24,9 @@ bind alt-n _navi_smart_replace
 
 alias topnet="nethogs -b"
 
+abbr --add usystem 'systemctl --user'
+abbr --add ulogs 'journalctl --user'
+
 set -gx TERMINAL_PROG (terminal-type)
 # ctrem "On terminal [green]'$TERMINAL_PROG'[/] agent [green]'$SSH_AGENT_PID'[/] "$SSH_AUTH_SOCK""
 
