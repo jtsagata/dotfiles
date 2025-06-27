@@ -1,4 +1,14 @@
-# source /usr/share/cachyos-fish-config/cachyos-config.fish
+if not status is-interactive
+    exit
+end
+
+## Environment setup
+# Apply .profile: use this to put fish compatible .profile stuff in
+if test -f ~/.fish_profile
+    source ~/.fish_profile
+end
+
+fish_add_path --prepend ~/.local/bin
 
 set -gx EDITOR nvim
 set -gx VISUAL code
@@ -23,7 +33,6 @@ bind up _atuin_bind_up
 bind alt-n _navi_smart_replace
 
 alias topnet="nethogs -b"
-
 abbr --add usystem 'systemctl --user'
 abbr --add ulogs 'journalctl --user'
 
