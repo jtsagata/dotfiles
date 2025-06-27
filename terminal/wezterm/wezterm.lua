@@ -24,7 +24,7 @@ config.font = wezterm.font_with_fallback {
 }
 
 
-config.enable_scroll_bar = false
+config.enable_scroll_bar = true
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
@@ -60,6 +60,7 @@ config.cursor_thickness = 2
 
 -- Mouse bindings, open links with CTRL-Click
 local act = wezterm.action
+
 config.bypass_mouse_reporting_modifiers = 'CTRL'
 config.mouse_bindings = {
   {

@@ -32,7 +32,9 @@ yay -Rns package_name     # Remove with dependencies and config
 
 ## Issues
 - Links on cosmic-terminal
+    * On WezTerm press Ctrl to open, also Ctrl-Click to paste 
 
 ## TODO
 - new-script
+- nerd-fonts
 

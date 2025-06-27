@@ -54,12 +54,12 @@ home_symbol = ''
 
 [directory.substitutions]
 # Keep in mind that the order matters.
-"Documents" = "󰈙"
-"Downloads" = ""
-"Music" = ""
-"Pictures" = ""
-'Projects' = '󱧽'
-'.config' = ''
+"Documents" = "Documents 󰈙"
+"Downloads" = "Downloads "
+"Music" = "Music "
+"Pictures" = "Pictures "
+'Projects' = 'Projects 󱧽'
+'.config' = 'Config '
 
 [shell]
 style = "fg:text1 bg:bar1"
