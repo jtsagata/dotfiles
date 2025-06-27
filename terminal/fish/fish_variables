@@ -8,8 +8,9 @@ SETUVAR __fish_initialized:3800
 SETUVAR _fisher_aohorodnyk_2F_fish_2D_autovenv_files:\x7e/\x2econfig/fish/conf\x2ed/autovenv\x2efish
 SETUVAR _fisher_franciscolourenco_2F_done_files:\x7e/\x2econfig/fish/conf\x2ed/done\x2efish
 SETUVAR _fisher_halostatue_2F_fish_2D_direnv_40_v1_files:\x7e/\x2econfig/fish/conf\x2ed/halostatue_fish_direnv\x2efish\x1e\x7e/\x2econfig/fish/completions/direnv\x2efish
+SETUVAR _fisher_kpbaks_2F_zellij_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/zellij\x2efish
 SETUVAR _fisher_mattmc3_2F_magic_2D_enter_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/magic\x2denter\x2efish
-SETUVAR _fisher_plugins:franciscolourenco/done\x1emattmc3/magic\x2denter\x2efish\x1eaohorodnyk/fish\x2dautovenv\x1ehalostatue/fish\x2ddirenv\x40v1
+SETUVAR _fisher_plugins:franciscolourenco/done\x1emattmc3/magic\x2denter\x2efish\x1eaohorodnyk/fish\x2dautovenv\x1ehalostatue/fish\x2ddirenv\x40v1\x1ekpbaks/zellij\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:586e75
 SETUVAR fish_color_cancel:\x2d\x2dreverse
@@ -117,3 +118,7 @@ SETUVAR pure_symbol_virtualenv_prefix:
 SETUVAR pure_threshold_command_duration:5
 SETUVAR pure_truncate_prompt_current_directory_keeps:\x2d1
 SETUVAR pure_truncate_window_title_current_directory_keeps:\x2d1
+SETUVAR zellij_fish_dump_full_screen:0
+SETUVAR zellij_fish_update_tab_name_on_preexec:0
+SETUVAR zellij_fish_update_tab_name_on_preexec_blacklist:pwd\x1ecd\x1erm\x1emv
+SETUVAR zellij_fish_update_tab_name_when_cwd_changes:1

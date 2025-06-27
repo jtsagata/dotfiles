@@ -1,9 +1,9 @@
 local wezterm = require 'wezterm'
 local M = {}
 
--- M.prog = { wezterm.home_dir .. "/.local/bin/zelly" }
--- M.prog = { "fish" }
-M.prog = { "/usr/bin/zellij"}
+M.prog = { wezterm.home_dir .. "/.local/bin/zelly" }
+M.prog = { "fish" }
+-- M.prog = { "/usr/bin/zellij"}
 
 M.width = 146
 M.height = 32
