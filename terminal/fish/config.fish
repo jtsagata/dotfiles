@@ -25,6 +25,6 @@ set -gx TERMINAL_PROG (terminal-type)
 # ctrem "On terminal [green]'$TERMINAL_PROG'[/] agent [green]'$SSH_AGENT_PID'[/] "$SSH_AUTH_SOCK""
 
 if status is-interactive
-    set ZELLIJ_AUTO_EXIT true 1
+    set ZELLIJ_AUTO_EXIT true
     eval (zellij setup --generate-auto-start fish | string collect)
 end
