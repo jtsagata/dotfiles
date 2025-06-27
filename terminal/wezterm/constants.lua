@@ -9,8 +9,6 @@ M.width = 146
 M.height = 32
 
 M.light_theme = "catppuccin-macchiato"
--- M.dark_theme = "catppuccin-mocha"
--- M.dark_theme = "catppuccin-latte"
 M.dark_theme = "GruvboxDark"
 
 M.font = "JetBrainsMono Nerd Font Mono"

@@ -4,6 +4,10 @@ My dotfiles.
 
 Managed by [Rotz 👃](https://volllly.github.io/rotz/)
 
+This is a work in progress and so configurations are volatile. 
+
+This config wont install any missing packages for now.
+
 #  Basic Pacman Commands
 
 ```
