@@ -20,6 +20,7 @@ export PAGER="bat"
 # Use Ctrl-y for <TAB> search, conflict solve for zellyj
 bind ctrl-y pager-toggle-search
 bind up _atuin_bind_up
+bind alt-n _navi_smart_replace
 
 alias topnet="nethogs -b"
 
