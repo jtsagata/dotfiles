@@ -1,5 +1,7 @@
-# .vscode
+.vscode
+.DS_Store
+.idea
 node_modules
 tmp
-/baza
-/target
+baza
+target
